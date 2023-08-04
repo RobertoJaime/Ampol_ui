@@ -1,0 +1,21 @@
+{
+  "name": "ampol_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "pretest": "ts-node -r tsconfig-paths/register -r ts-node/register globalSetup.ts"
+  },
+  "playwright": {
+    "testDir": "tests"
+  },
+  "keywords": [],
+  "author": "Roberto Ureta",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2",
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.2"
+  }
+}
