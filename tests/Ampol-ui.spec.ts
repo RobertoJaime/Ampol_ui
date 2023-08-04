@@ -3,13 +3,13 @@ import { AmpolHomePage } from './AmpolHomePage';
 import { AmpolEnergyPage } from './AmpolEnergyPage';
 import { Page, Browser, test, expect } from '@playwright/test';
 
-test.describe('Scenario A Test', () => {
+test.describe('Ampol Technical Test', () => {
   let browser: Browser;
   let page: Page;
   let ampollHomePage: AmpolHomePage;
   let ampollEnergyPage: AmpolEnergyPage;
 
-  test('should perform Scenario A steps', async ({page}) => {
+  test('Scenario A steps', async ({page}) => {
     // Visit https://www.ampol.com.au/
     await page.goto('https://www.ampol.com.au/');
     // Hover on ‘YOUR VEHICLE’ menu.
