@@ -2,6 +2,8 @@
 ## Install
 
 ```shell
+  Description
+    At the project root folder, install the project dependencies by running the following command:
   npm install
     installs the project dependencies.
 ```
@@ -16,7 +18,7 @@
 
 ```shell
 Description
-    Inside that directory, you can run several commands:
+    Inside the /tests directory, you can run several commands:
 
   npx playwright test
     Runs the end-to-end tests.
