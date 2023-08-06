@@ -1,13 +1,12 @@
+// AmpolHomePage.js
 import { Page } from '@playwright/test';
-
 export class AmpolHomePage {
   private page: Page;
-
   constructor(page: Page) {
     this.page = page;
   }
 
-  async visit() {
+  async navigate() {
     await this.page.goto('https://www.ampol.com.au/');
   }
 
@@ -15,11 +14,7 @@ export class AmpolHomePage {
     await this.page.hover('text=YOUR VEHICLE');
   }
 
-  async clickEVChargingOption() {
-    await this.page.click('text=EV charging');
-  }
-
-  async clickAmpolEnergyIcon() {
-    await this.page.click('.ampol-icon');
+  async clickOnEVChargingOption() {
+    await this.page.click('text=EV Charging');
   }
 }

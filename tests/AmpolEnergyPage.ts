@@ -1,19 +1,17 @@
+// AmpolEnergyPage.js
 import { Page } from '@playwright/test';
-import { expect } from '@playwright/test';
-
 export class AmpolEnergyPage {
   private page: Page;
-
   constructor(page: Page) {
     this.page = page;
   }
 
-  async verifyURL(expectedURL: string) {
-    const currentURL = await this.page.url();
-    expect(currentURL).toBe(expectedURL);
+  async clickOnAmpolEnergyIcon() {
+    await this.page.locator('#mod-nav-1').getByRole('link').nth(1).click();
   }
 
-  async clickSwitchNowButton() {
-    await this.page.click('text=SWITCH NOW');
+  async clickOnSwitchNowButton() {
+    await this.page.getByRole('banner').getByRole('link', { name: 'Switch now' }).click();
   }
 }
+
