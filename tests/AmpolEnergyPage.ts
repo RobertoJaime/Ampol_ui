@@ -1,4 +1,3 @@
-// AmpolEnergyPage.js
 import { Page } from '@playwright/test';
 export class AmpolEnergyPage {
   private page: Page;

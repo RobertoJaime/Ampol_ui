@@ -1,4 +1,3 @@
-// AmpolHomePage.js
 import { Page } from '@playwright/test';
 export class AmpolHomePage {
   private page: Page;

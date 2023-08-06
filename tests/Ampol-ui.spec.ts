@@ -1,4 +1,3 @@
-// test.js
 import { chromium } from 'playwright';
 import { test, expect } from '@playwright/test';
 import { AmpolHomePage } from './AmpolHomePage';
