@@ -1,0 +1,40 @@
+pipeline {
+   agent { 
+     docker { 
+       image 'mcr.microsoft.com/playwright:v1.17.2-focal'
+     } 
+   }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                echo 'Cloning the repository'
+                sh 'rm -fr Ampol_ui'
+                sh 'git clone https://github.com/RobertoJaime/Ampol_ui.git'
+            }
+        }
+        stage('Install Playwright') {
+            steps {
+                echo 'Installing Playwright'
+                dir('Ampol_ui') {
+                    sh 'npm i -D @playwright/test'
+                    sh 'npx playwright install'
+               }
+            }
+        }
+        stage('Run Playwright Tests') {
+            steps {
+                echo 'Running Playwright tests'
+                dir('Ampol_ui') {
+                    sh 'npx playwright test --list'
+                    sh 'npx playwright test'
+               }
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+    }
+}
