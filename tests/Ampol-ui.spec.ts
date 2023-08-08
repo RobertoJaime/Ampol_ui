@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import { test, expect } from '@playwright/test';
-import { AmpolHomePage } from './AmpolHomePage';
-import { AmpolEnergyPage } from './AmpolEnergyPage';
+import { AmpolHomePage } from '../pages/AmpolHomePage';
+import { AmpolEnergyPage } from '../pages/AmpolEnergyPage';
 
 test.describe('Ampol Technical Test', () => {
   let browser;
