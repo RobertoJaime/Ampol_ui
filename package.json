@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
+    "test": "npx playwright test --project=chromium",
     "pretest": "ts-node -r tsconfig-paths/register -r ts-node/register globalSetup.ts"
   },
   "playwright": {
